@@ -17,3 +17,31 @@ var arrayTwo = ["cats", "dog", "belly"];
 
 console.log(arrayOne.sort(function(a, b){ return b.length - a.length}));
 console.log(arrayTwo.sort(function(a, b){ return b.length - a.length}));
+
+console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+//Longest name looking in objects
+
+var namesEmails = [
+    {
+        name: "Anthony",
+        email: "anthony@gmail.com"
+    },
+    {
+        name: "Nathan",
+        email: "nathan@gmail.com"
+    },
+    {
+        name: "Johny",
+        email: "johny@gmail.com"
+    }
+];
+
+
+console.log(namesEmails.sort(function(a,b){
+    return b.name.length - a.name.length;
+}));
+
+
+console.log(namesEmails.sort(function(a,b){
+    return a.email > b.email;
+}));
