@@ -19,6 +19,10 @@ console.log(arrayOne.sort(function(a, b){ return b.length - a.length}));
 console.log(arrayTwo.sort(function(a, b){ return b.length - a.length}));
 
 console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+
+
+
+
 //Longest name looking in objects
 
 var namesEmails = [
@@ -44,4 +48,45 @@ console.log(namesEmails.sort(function(a,b){
 
 console.log(namesEmails.sort(function(a,b){
     return a.email > b.email;
+}));
+
+
+console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+
+
+//Function that uses MAP !!!
+
+function mapFunc(a){
+    return Math.sqrt(a);
+}
+
+console.log(mapFunc(4));
+
+var array = [4, 9, 16];
+
+console.log(array.map(Math.sqrt));
+
+console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+
+//Function square 
+
+function square (obj){
+    var num;
+    return num = obj.num * obj.num;
+}
+
+var object = [
+    {
+        name: "John",
+        email: "john@gmail.com",
+        num: 24},
+    {
+        name: "Benji",
+        email: "benji@gmail.com",
+        num: 4}
+    ];
+    
+
+console.log(object.map(function(x){
+    return x.num * x.num;
 }));
