@@ -88,5 +88,9 @@ var object = [
     
 
 console.log(object.map(function(x){
-    return x.num * x.num;
+    return x.num = x.num * x.num;
 }));
+
+console.log(object);
+
+console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
