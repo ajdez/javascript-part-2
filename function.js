@@ -4,10 +4,16 @@
 
 function prototypeSort(strOne, strTwo, strThree){
     var array = [strOne, strTwo, strThree];
-    return array.sort(function(a, b){
-        return a.length - b.length;
+    array.sort(function(a, b){
+        return b.length - a.length;
     });
+    return array[0];
 }
 
-console.log(prototypeSort("Anthony", "Hello", "Hellomama"));
+console.log(prototypeSort("Anthony", "Hello", "Hellomama", "arr"));
 
+var arrayOne = ["John", "Ben", "Allen"];
+var arrayTwo = ["cats", "dog", "belly"];
+
+console.log(arrayOne.sort(function(a, b){ return b.length - a.length}));
+console.log(arrayTwo.sort(function(a, b){ return b.length - a.length}));
