@@ -94,3 +94,43 @@ console.log(object.map(function(x){
 console.log(object);
 
 console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+
+//OperationMaker function
+
+function operationFunction(operation){
+    if (operation === 'add' || operation === 'subtract' ||
+        operation === 'mult' || operation === 'div'){
+            return function(a, b){
+                if (operation === 'add'){
+                    return a + b;
+                }
+                else if (operation === 'subtract'){
+                    return a - b;
+                }
+                else if (operation === 'mult'){
+                    return a * b;
+                }
+                else if (operation === 'div'){
+                    return a / b;
+                }
+            }
+        }
+    else{
+        return console.log("Please add a valid input: 'add', 'subtract', 'mult', 'div'");
+    }
+}
+
+var add = operationFunction('add');
+var sub = operationFunction('subtract');
+var div = operationFunction('div');
+var mult = operationFunction('mult');
+
+var added = add(7, 5);
+var subed = sub(7, 5);
+var dived = div(15, 5);
+var multed = mult(3, 5);
+
+console.log(added);
+console.log(subed);
+console.log(dived);
+console.log(multed);
