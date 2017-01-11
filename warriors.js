@@ -28,6 +28,4 @@ var link = new Warrior("Link", "M", 1, "Sword");
 var kevin = new Warrior("Kevin Spacey", "M", 20, "Space Attack");
 var yoshi = new Warrior("Yoshi", "F", 1, "Eggs");
 
-yoshi.faceoff(conan);
-mario.faceoff(yoshi);
-kevin.faceoff(link);
+kevin.faceoff(yoshi);
