@@ -1,15 +1,7 @@
 //Just created the map file
 function Tile (type){
     this.type = type;
-};
-
-Tile.prototype.isWalkable = function(type){
-    if (this.type === 'sand' || this.type === 'grass'){
-        return true;
-    }
-    else{
-        return false;
-    }
+    this.isWalkable = type ==="sand" || type === "grass" ? true:false;
 };
 
 //created array in global area
@@ -48,5 +40,5 @@ function Map (width, height){
 	})(this.width, this.height);
 }
 
-
-// Trying to fill first aray, than push it into the first aray, creating the 2d file
+var p = new Map (3,3);
+console.log(p.tile);
