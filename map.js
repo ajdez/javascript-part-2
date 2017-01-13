@@ -2,6 +2,7 @@
 function Tile (type){
     this.type = type;
     this.isWalkable = type ==="sand" || type === "grass" ? true:false;
+    
 };
 
 //created array in global area
@@ -9,7 +10,16 @@ function Tile (type){
 function Map (width, height){
 	this.width = width;
 	this.height = height;
-	this.tile = (function(w, h){
+	this.walkableOutput = function(){
+		this.tiles.forEach(function(arrayOfTiles){
+			console.log(
+				arrayOfTiles.map(function(tile){
+					return tile.type==="water" ? "X" : "O"
+				}).join(" ")
+			)
+		})
+	}
+	this.tiles = (function(w, h){
 		var array = [];
 		for(var i = 0; i < w; i++){
 			var arrayTwo = [];
@@ -33,12 +43,10 @@ function Map (width, height){
 			array.push(arrayTwo);
 		}
 		return array;
-		
-		//------------------------------------------
-		
-		
 	})(this.width, this.height);
 }
 
+
 var p = new Map (3,3);
-console.log(p.tile);
+
+console.log(p.walkableOutput());
